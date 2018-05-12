@@ -1,7 +1,7 @@
 ---
 # Main stylesheet for the website
 ---
-$primary: {{ site.artisan.accent }};
+$primary: {{ site.artisan.accent | default: "#007bff" }};
 
 @import 'highlighting';
 @import 'variables';
@@ -36,6 +36,9 @@ html, body, .mvh-100 {
     }
 
     &__avatar {
+        width: 128px;
+        height: 128px;
+        
         border: solid $primary 4px;
         border-radius: 100%;
     }

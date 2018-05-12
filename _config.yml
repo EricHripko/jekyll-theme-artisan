@@ -28,6 +28,7 @@ rss: rss
 artisan:
   date_format: "%b %-d, %Y"
   accent: "#007bff"
+  avatar: http://via.placeholder.com/256x256
 
 # Dependencies
 plugins:
