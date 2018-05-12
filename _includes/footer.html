@@ -7,7 +7,7 @@
                     {%- for category in site.categories -%}
                         {%- capture category_name -%}{{ category | first }}{%- endcapture -%}
                         <li class="nav-item">
-                            <a class="nav-link artisan-footer__link px-0" href="#">{{ category_name | escape }}</a>
+                            <a class="nav-link artisan-footer__link px-0" href="{{ "categories" | relative_url }}#{{ category_name | slugize }}">{{ category_name | escape }}</a>
                         </li>
                     {%- endfor -%}
                 </ul>
