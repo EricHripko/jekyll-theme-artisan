@@ -1,4 +1,4 @@
-# artisan-theme
+# jekyll-theme-artisan
 *Artisan is a Jekyll theme for programmer blogs*.
 
 ## Installation
@@ -6,13 +6,13 @@
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "artisan-theme"
+gem "jekyll-theme-artisan"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: artisan-theme
+theme: jekyll-theme-artisan
 ```
 
 And then execute:
@@ -21,7 +21,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install artisan-theme
+    $ gem install jekyll-theme-artisan
 
 ## Contents At-A-Glance
 
