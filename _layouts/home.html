@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+{%- if page.title -%}
+    <h1 class="display-4">{{ page.title | escape }}</h1>
+{%- endif -%}
+
+{{ content }}
+
+<div class="container pb-4">
+    <div class="row">
+        {%- if site.posts.size > 0 -%}
+            {%- assign date_format = site.artisan.date_format | default: "%b %-d, %Y" -%}
+            {%- for post in site.posts -%}
+            <div class="col-md-4 pt-4">
+                <div class="card">
+                    <div class="article-preview card-body">
+                        <h6 class="text-muted">
+                            on
+                            <time datetime="{{ page.date | date_to_xmlschema }}">
+                                {{ post.date | date: date_format }}
+                            </time>
+                            {%- if post.categories.size > 0 -%}
+                                in
+                                {%- for category in post.categories -%}
+                                    <a href="{{ "categories" | relative_url }}#{{ category | slugize }}" class="artisan-link">
+                                        {{ category | escape }}
+                                    </a>
+                                {%- endfor -%}
+                            {%- endif -%}
+                        </h6>
+                        <h5 class="card-title">{{ post.title | escape }}</h5>
+                        <div class="card-text">
+                            {{ post.excerpt }}
+                        </div>
+                        <div class="article-preview__readmore p-3">
+                            <a href="{{ post.url | relative_url }}"
+                               class="btn btn-primary">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {%- endfor -%}
+        {%- endif -%}
+    </div>
+</div>

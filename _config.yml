@@ -1,0 +1,41 @@
+# General
+title: John's Blog
+subtitle: Awesome Stuff
+author: John Doe
+description: >
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+# Social
+linkedin_username: jekyll
+github_username:  jekyll
+twitter_username: jekyllrb
+facebook_username: jekyll
+rss: rss
+
+# Comment section
+#disqus:
+#  shortname: my-awesome-blog
+
+# Google Analytics
+#google:
+#  analytics: UAABCD
+
+# Artisan date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to
+# customize this
+artisan:
+  date_format: "%b %-d, %Y"
+  accent: "#007bff"
+
+# Dependencies
+plugins:
+  - autoprefixer-rails
+  - bootstrap
+  - jekyll-assets
+  - jekyll-feed
+  - jekyll-seo-tag
+
+sass:
+  sass_dir: ./_sass

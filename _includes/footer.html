@@ -1,0 +1,44 @@
+<footer class="artisan-footer pb-4 text-muted">
+    <div class="container">
+        <div class="row">
+            <section class="col-md-4 pt-4">
+                <h6>Categories</h6>
+                <ul class="nav flex-column">
+                    {%- for category in site.categories -%}
+                        {%- capture category_name -%}{{ category | first }}{%- endcapture -%}
+                        <li class="nav-item">
+                            <a class="nav-link artisan-footer__link px-0" href="#">{{ category_name | escape }}</a>
+                        </li>
+                    {%- endfor -%}
+                </ul>
+            </section>
+            <section class="col-md-4 pt-4">
+                <h6>Social</h6>
+                {%- include social.html -%}
+            </section>
+            <section class="col-md-4 pt-4">
+                <h6>{{ site.title | escape }}</h6>
+                <small>
+                    <p class="text-justify d-md-none">
+                        {{ site.description | escape }}
+                    </p>
+                    <p>
+                        Copyright
+                        {{ site.time | date: '%Y' }}
+                        <span>
+                            {%- if site.author -%}
+                                {{ site.author | escape }}
+                            {%- else -%}
+                                {{ site.title | escape }}
+                            {%- endif -%}
+                            .
+                        </span>
+                        <a href="https://github.com/EricHripko/artisan">Artisan</a>
+                        theme designed and developed by
+                        <a href="https://github.com/EricHripko">Eric Hripko</a>.
+                    </p>
+                </small>
+            </section>
+        </div>
+    </div>
+</footer>

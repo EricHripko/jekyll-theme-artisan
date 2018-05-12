@@ -1,0 +1,70 @@
+<table>
+    {%- if site.linkedin_username -%}
+        <tr>
+            <td>
+                <i class="fab fa-linkedin fa-lg float-left text-primary"></i>
+            </td>
+            <td class="pl-1 py-2">
+                <a href="https://www.linkedin.com/in/{{ site.linkedin_username | cgi_escape | escape }}"
+                   class="artisan-footer__link"
+                   target="_blank">
+                    {{ site.linkedin_username | escape }}
+                </a>
+            </td>
+        </tr>
+    {%- endif -%}
+    {%- if site.github_username -%}
+        <tr>
+            <td>
+                <i class="fab fa-github-square fa-lg float-left text-primary"></i>
+            </td>
+            <td class="pl-1 py-2">
+                <a href="https://github.com/{{ site.github_username | cgi_escape | escape }}"
+                   class="artisan-footer__link"
+                   target="_blank">
+                   {{ site.github_username | escape }}
+                </a>
+            </td>
+        </tr>
+    {%- endif -%}
+    {%- if site.twitter_username -%}
+        <tr>
+            <td>
+                <i class="fab fa-twitter-square fa-lg float-left text-primary"></i>
+            </td>
+            <td class="pl-1 py-2">
+                <a href="https://twitter.com/{{ site.twitter_username | cgi_escape | escape }}"
+                   class="artisan-footer__link"
+                   target="_blank">
+                   {{ site.twitter_username | escape }}
+                </a>
+            </td>
+        </tr>
+    {%- endif -%}
+    {%- if site.facebook_username -%}
+        <tr>
+            <td>
+                <i class="fab fa-facebook-square fa-lg float-left text-primary"></i>
+            </td>
+            <td class="pl-1 py-2">
+                <a href="https://www.facebook.com/{{ site.facebook_username| cgi_escape | escape }}"
+                   class="artisan-footer__link"
+                   target="_blank">
+                   {{ site.facebook_username | escape }}
+                </a>
+            </td>
+        </tr>
+    {%- endif -%}
+    {%- if site.rss -%}
+        <tr>
+            <td>
+                <i class="fas fa-rss-square fa-lg float-left text-primary"></i>
+            </td>
+            <td class="pl-1 py-2">
+                <a href="{{ "feed.xml" | relative_url }}" class="artisan-footer__link">
+                    {{ site.rss | escape }}
+                </a>
+            </td>
+        </tr>
+    {%- endif -%}
+</table>

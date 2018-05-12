@@ -1,0 +1,104 @@
+---
+# Main stylesheet for the website
+---
+$primary: {{ site.artisan.accent }};
+
+@import 'highlighting';
+@import 'variables';
+@import 'bootstrap';
+
+$border-light: solid rgba(0, 0, 0, .12) 1px;
+
+html, body, .mvh-100 {
+    min-height: 100vh;
+}
+
+.navbar {
+    border-top: solid $primary 4px;
+    border-bottom: $border-light;
+}
+
+.artisan-profile {
+    border-right: $border-light;
+    min-height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.artisan-profile-banner {
+    display: block;
+
+    background-image: url('../assets/background.png');
+    border-bottom: $border-light;
+
+    &:hover, &:visited, &:active {
+        text-decoration: none;
+    }
+
+    &__avatar {
+        border: solid $primary 4px;
+        border-radius: 100%;
+    }
+}
+
+.artisan-content {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.artisan-article {
+    max-width: 700px;
+    margin: 0 auto;
+
+    &__seealso {
+        text-decoration: none;
+
+        &:hover, &:active, &:visited, &:focus {
+            text-decoration: none;
+        }
+    }
+}
+
+.artisan-link {
+    color: inherit;
+
+    &:hover, &:active, &:visited, &:focus {
+        color: inherit;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.article-preview {
+    height: 320px;
+    overflow: hidden;
+
+    &__readmore {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        border-top: $border-light;
+        background: $card-bg;
+    }
+}
+
+.artisan-footer {
+    background-color: #F5F5F5;
+    border-top: $border-light;
+
+    &__link {
+        color: inherit;
+
+        &:hover, &:active, &:visited, &:focus {
+            color: inherit;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{%- include head.html -%}
+<body>
+    {%- include mobile_nav.html -%}
+    <div class="container-fluid mvh-100">
+        <div class="row mvh-100">
+            {%- include header.html -%}
+            <main class="artisan-content col-md-9">
+                {%- include desktop_nav.html -%}
+                {{ content }}
+                {%- include footer.html -%}
+            </main>
+        </div>
+    </div>
+</body>
+</html>
