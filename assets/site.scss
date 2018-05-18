@@ -83,21 +83,6 @@ html, body, .mvh-100 {
     }
 }
 
-.article-preview {
-    height: 320px;
-    overflow: hidden;
-
-    &__readmore {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        right: 0;
-
-        border-top: $border-light;
-        background: $card-bg;
-    }
-}
-
 .artisan-footer {
     background-color: #F5F5F5;
     border-top: $border-light;

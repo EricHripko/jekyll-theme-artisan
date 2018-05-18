@@ -6,8 +6,31 @@
             <h6 class="text-muted">{{ site.subtitle | escape }}</h6>
         </a>
 
-        <p class="p-3 text-muted d-none d-md-block">
-            {{ site.description | escape }}
-        </p>
+        <table class="m-2 text-muted d-none d-md-block">
+            <tr>
+                <td class="px-2">
+                    <i class="fas fa-building fa-lg"></i>
+                </td>
+                <td class="py-2">
+                    {{ site.artisan.work | default: "Self-employed" }}
+                </td>
+            </tr>
+            <tr>
+                <td class="px-2">
+                    <i class="fas fa-university fa-lg"></i>
+                </td>
+                <td class="py-2">
+                    {{ site.artisan.university | default: "University of Life" }}
+                </td>
+            </tr>
+            <tr>
+                <td class="px-2">
+                    <i class="fas fa-map-marker fa-lg"></i>
+                </td>
+                <td class="py-2">
+                    {{ site.artisan.location | default: "Earth, Milky Way" }}
+                </td>
+            </tr>
+        </table>
     </div>
 </header>

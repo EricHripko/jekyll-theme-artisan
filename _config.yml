@@ -12,6 +12,7 @@ linkedin_username: jekyll
 github_username:  jekyll
 twitter_username: jekyllrb
 facebook_username: jekyll
+500px_username: jekyll
 rss: rss
 
 # Comment section
@@ -29,6 +30,9 @@ artisan:
   date_format: "%b %-d, %Y"
   accent: "#007bff"
   avatar: http://via.placeholder.com/256x256
+  work: Student
+  university: University of Somesort
+  location: UK
 
 # Dependencies
 plugins:

@@ -1,8 +1,8 @@
 <table>
     {%- if site.linkedin_username -%}
         <tr>
-            <td>
-                <i class="fab fa-linkedin fa-lg float-left text-primary"></i>
+            <td class="text-center">
+                <i class="fab fa-linkedin-in fa-lg text-primary"></i>
             </td>
             <td class="pl-1 py-2">
                 <a href="https://www.linkedin.com/in/{{ site.linkedin_username | cgi_escape | escape }}"
@@ -15,8 +15,8 @@
     {%- endif -%}
     {%- if site.github_username -%}
         <tr>
-            <td>
-                <i class="fab fa-github-square fa-lg float-left text-primary"></i>
+            <td class="text-center">
+                <i class="fab fa-github-alt fa-lg text-primary"></i>
             </td>
             <td class="pl-1 py-2">
                 <a href="https://github.com/{{ site.github_username | cgi_escape | escape }}"
@@ -29,8 +29,8 @@
     {%- endif -%}
     {%- if site.twitter_username -%}
         <tr>
-            <td>
-                <i class="fab fa-twitter-square fa-lg float-left text-primary"></i>
+            <td class="text-center">
+                <i class="fab fa-twitter fa-lg text-primary"></i>
             </td>
             <td class="pl-1 py-2">
                 <a href="https://twitter.com/{{ site.twitter_username | cgi_escape | escape }}"
@@ -43,8 +43,8 @@
     {%- endif -%}
     {%- if site.facebook_username -%}
         <tr>
-            <td>
-                <i class="fab fa-facebook-square fa-lg float-left text-primary"></i>
+            <td class="text-center">
+                <i class="fab fa-facebook-f fa-lg text-primary"></i>
             </td>
             <td class="pl-1 py-2">
                 <a href="https://www.facebook.com/{{ site.facebook_username| cgi_escape | escape }}"
@@ -55,10 +55,24 @@
             </td>
         </tr>
     {%- endif -%}
+    {%- if site.500px_username -%}
+        <tr>
+            <td class="text-center">
+                <i class="fab fa-500px fa-lg text-primary"></i>
+            </td>
+            <td class="pl-1 py-2">
+                <a href="https://500px.com/{{ site.500px_username| cgi_escape | escape }}"
+                   class="artisan-footer__link"
+                   target="_blank">
+                   {{ site.500px_username | escape }}
+                </a>
+            </td>
+        </tr>
+    {%- endif -%}
     {%- if site.rss -%}
         <tr>
-            <td>
-                <i class="fas fa-rss-square fa-lg float-left text-primary"></i>
+            <td class="text-center">
+                <i class="fas fa-rss fa-lg text-primary"></i>
             </td>
             <td class="pl-1 py-2">
                 <a href="{{ "feed.xml" | relative_url }}" class="artisan-footer__link">
