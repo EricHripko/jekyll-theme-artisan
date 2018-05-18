@@ -8,37 +8,35 @@ layout: default
 
 {{ content }}
 
-<div class="py-4">
-    {%- if site.posts.size > 0 -%}
-        {%- assign date_format = site.artisan.date_format | default: "%b %-d, %Y" -%}
-        {%- for post in site.posts -%}
-        <article class="artisan-article py-4">
-            <h6 class="text-muted">
-                on
-                <time datetime="{{ page.date | date_to_xmlschema }}">
-                    {{ post.date | date: date_format }}
-                </time>
-                {%- if post.categories.size > 0 -%}
-                    in
-                    {%- for category in post.categories -%}
-                        <a href="{{ "categories" | relative_url }}#{{ category | slugize }}" class="artisan-link">
-                            {{ category | escape }}
-                        </a>
-                    {%- endfor -%}
-                {%- endif -%}
-            </h6>
-            <h3>{{ post.title | escape }}</h3>
-            <div class="text-muted text-justify">
-                {{ post.excerpt }}
-            </div>
-            <div class="text-left">
-                <a href="{{ post.url | relative_url }}"
-                    class="btn btn-outline-primary">
-                    <i class="fas fa-chevron-right mr-1"></i>
-                    Read More
-                </a>
-            </div>
-        </article>
-        {%- endfor -%}
-    {%- endif -%}
-</div>
+{%- if site.posts.size > 0 -%}
+    {%- assign date_format = site.artisan.date_format | default: "%b %-d, %Y" -%}
+    {%- for post in site.posts -%}
+    <article class="artisan-article p-4">
+        <h6 class="text-muted">
+            on
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ post.date | date: date_format }}
+            </time>
+            {%- if post.categories.size > 0 -%}
+                in
+                {%- for category in post.categories -%}
+                    <a href="{{ "categories" | relative_url }}#{{ category | slugize }}" class="artisan-link">
+                        {{ category | escape }}
+                    </a>
+                {%- endfor -%}
+            {%- endif -%}
+        </h6>
+        <h3>{{ post.title | escape }}</h3>
+        <div class="text-muted text-justify">
+            {{ post.excerpt }}
+        </div>
+        <div class="text-left">
+            <a href="{{ post.url | relative_url }}"
+                class="btn btn-outline-primary">
+                <i class="fas fa-chevron-right mr-1"></i>
+                Read More
+            </a>
+        </div>
+    </article>
+    {%- endfor -%}
+{%- endif -%}
